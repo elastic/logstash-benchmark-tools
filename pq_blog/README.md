@@ -2,15 +2,15 @@
 
 - **apache.conf**: The logstash configuration used to perform the bechmark
 
-- **monitor.rb**: Monitoring script used to collect the performance metrics
+- **measure_performance.rb**: Script used to collect the performance metrics
 
 - Sample Apache access logs data can be found at https://s3.amazonaws.com/data.elasticsearch.org/apache_logs/apache_access_logs.tar.gz
 
 ## Usage
 
-First you need to have a Ruby interpreter available to run the `monitor.rb` script. Any Ruby should work, this is a very simple script without any dependencies.
+First you need to have a Ruby interpreter available to run the `measure_performance.rb` script. Any Ruby should work, this is a very simple script without any dependencies.
 
-Running `monitor.rb` will simply connect to localhost on port 9600 on the logstash monitoring API and start collecting events metrics and output the events per second throughput to *stdout* one line per second.
+Running `measure_performance.rb` will simply connect to localhost on port 9600 on the logstash monitoring API and start collecting events metrics and output the events per second throughput to *stdout* one line per second.
 
 For example here's how to run it with this configuration and data.
 
@@ -31,7 +31,7 @@ $ cat apache_access_logs | bin/logstash -f apache.conf > /dev/null
 - In a separate shell, start the monitoring script
 
 ```sh
-$ ruby monitor.rb
+$ ruby measure_performance.rb
 ```
 
 The output should look like this, where each line is the tuple second,event-per-second
