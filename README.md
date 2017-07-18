@@ -1,3 +1,5 @@
 # logstash-benchmark-tools
 
-- **pq_blog/** Tools for measuring performance for the persistent queue blog.
+### pq_blog/
+
+Tools for measuring performance for the persistent queue blog.

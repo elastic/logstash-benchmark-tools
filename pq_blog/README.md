@@ -14,9 +14,9 @@ Running `monitor.rb` will simply connect to localhost on port 9600 on the logsta
 
 For example here's how to run it with this configuration and data.
 
-- Download the sample apache access logs data from https://s3.amazonaws.com/data.elasticsearch.org/apache_logs/apache_access_logs.tar.gz
+- Download the [sample apache access logs data](https://s3.amazonaws.com/data.elasticsearch.org/apache_logs/apache_access_logs.tar.gz)
 
-- Unpack the sample apache access logs data
+- Unpack the sample data
 
 ```sh
 $ tar xzf apache_access_logs.tar.gz
