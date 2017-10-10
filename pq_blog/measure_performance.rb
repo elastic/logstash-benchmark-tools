@@ -22,11 +22,11 @@ poller_thread = Thread.new do
       stats = JSON.parse(response.body)
       out = stats["pipeline"].nil? ? stats["events"]["out"] : stats["pipeline"]["events"]["out"]
       queue << { :seq => seq, :out => out }
+      seq += POLL_DELAY
     else
       $stderr.puts("http response error #{response.inspect}")
     end
 
-    seq += POLL_DELAY
     sleep(POLL_DELAY)
   end
 end
