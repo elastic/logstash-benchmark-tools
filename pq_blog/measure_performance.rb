@@ -30,7 +30,6 @@ poller_thread = Thread.new do
     sleep(POLL_DELAY)
   end
 end
- ddd
 stats_thread = Thread.new do
   last_stat = queue.pop
 
